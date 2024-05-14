@@ -1,6 +1,5 @@
-#Todo List
-
-##Features
+# Todo List
+## Features
 -  Utilize the JSONPlaceholder API to fetch 10 todos and display them in the application.
 - Input field in the application to allow users to add more todos.
 - Delete Icon: Allows users to remove the todo from the list.
