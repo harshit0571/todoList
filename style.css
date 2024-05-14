@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+main {
+  background-color: aliceblue;
+  height: auto;
+  min-height: 100vh;
+}
+
+.header {
+  width: 100%;
+  background-color: rgb(160, 211, 255);
+  height: max-content;
+  text-align: center;
+  padding: 20px;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 20px;
+  height: max-content;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.addTodoBox {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: max-content;
+  gap: 20px;
+  background-color: white;
+  padding: 40px;
+  border-radius: 10px;
+}
+.addTodoBox input {
+  border: none;
+  border-bottom: 1px solid rgb(102, 184, 255);
+  outline: none;
+  text-align: start;
+  width: 50%;
+  min-width: 300px;
+  padding: 5px;
+  font-size: 1.2rem;
+}
+
+.addTodoBox button {
+  width: max-content;
+  color: white;
+
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 5px;
+  background-color: rgb(255, 106, 0);
+  border: none;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.addTodoBox button:hover {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.bottomContainer {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  height: max-content;
+  margin-bottom: 20px;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.todoContainer {
+  display: flex;
+  width: 100%;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.todo {
+  width: 100%;
+  padding-left: 5px;
+  display: flex;
+  font-size: 1.3rem;
+  justify-content: space-between;
+  padding-top: 10px;
+  border-radius: 5px;
+  padding-bottom: 10px;
+
+  background-color: aliceblue;
+}
+
+.todo .buttons {
+  display: flex;
+
+  width: max-content;
+  gap: 20px;
+}
+.todo .buttons input {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.todo .buttons i {
+  color: red;
+
+  cursor: pointer;
+}
+
+#number {
+  width: max-content;
+  min-width: 30px;
+  padding-right: 5px;
+}
+
+#task {
+  text-align: start;
+  padding-right: 5%;
+}
+.checked {
+  text-decoration: line-through;
+}
+button {
+  cursor: pointer;
+}
+.todo:hover {
+  background-color: rgb(160, 211, 255);
+}
+
+.todoCounter {
+  display: flex;
+  width: 60%;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.todoCounter div {
+  padding: 20px;
+  width: max-content;
+  border-radius: 10px;
+  height: max-content;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(232, 186, 186, 0.1);
+  background-color: white;
+  transition: 0.5s;
+}
+.totalTodos:hover {
+  background-color: rgb(160, 211, 255);
+  cursor: pointer;
+  color: white;
+}
+.completedTodos:hover {
+  background-color: green;
+  cursor: pointer;
+  color: white;
+}
+.incompletedTodos:hover {
+  background-color: red;
+  cursor: pointer;
+  color: white;
+}
+
+@media screen and (max-width: 1024px) {
+  .addTodoBox {
+    width: 80%;
+  }
+  .bottomContainer {
+    width: 80%;
+  }
+  .todoCounter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    gap: 5px;
+  }
+  .todoCounter div {
+    padding: 10px;
+    width: max-content;
+    border-radius: 10px;
+    height: max-content;
+    min-width: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    transition: 0.5s;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  * {
+    font-size: 17px;
+  }
+  .addTodoBox {
+    width: 90%;
+    gap: 10px;
+    padding: 15px;
+  }
+  .bottomContainer {
+    width: 90%;
+  }
+  .todoCounter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
+    justify-content: center;
+    gap: 5px;
+  }
+  .todoCounter div {
+    padding: 5px;
+    width: max-content;
+    border-radius: 10px;
+    height: max-content;
+    min-width: 0px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    background-color: white;
+    transition: 0.5s;
+  }
+
+  .addTodoBox input {
+    font-size: 1rem;
+    width: 100%;
+    min-width: 100px;
+    padding: 5px;
+  }
+
+  .addTodoBox button {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 1rem;
+  }
+}

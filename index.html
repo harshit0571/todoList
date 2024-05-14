@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <section class="header">
+        <h1>Todo List</h1>
+      </section>
+
+      <section class="mainContainer">
+        <div class="addTodoBox">
+          <input
+            type="text"
+            id="addInput"
+            placeholder="what would you like to do?"
+          />
+          <button onclick="addTask()">Add Task</button>
+        </div>
+        <div class="todoCounter">
+          <div class="totalTodos">Total Tasks: 10</div>
+          <div class="completedTodos">Completed Tasks: 3</div>
+          <div class="incompletedTodos">Incomplete Tasks: 7</div>
+        </div>
+        <div class="bottomContainer">
+          <h1>Tasks Lists</h1>
+          <div class="todoContainer"></div>
+        </div>
+      </section>
+    </main>
+    <script src="server.js"></script>
+  </body>
+</html>
